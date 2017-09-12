@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QPushButton>
+
 
 namespace Ui {
 class MainWindow;
@@ -14,6 +16,14 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+
+private slots:
+    void on_playButton_clicked();
+
+    void on_trainButton_clicked();
+
+
+    void on_connectButton_clicked(bool checked);
 
 private:
     Ui::MainWindow *ui;
