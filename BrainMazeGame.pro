@@ -30,8 +30,15 @@ SOURCES += \
 
 HEADERS += \
         mainwindow.h \
-    trainingwindow.h
+    trainingwindow.h \
+    thinkgear.h
 
 FORMS += \
         mainwindow.ui \
     trainingwindow.ui
+
+
+win32: LIBS += -L$$PWD/./ -lthinkgear
+
+INCLUDEPATH += $$PWD/.
+DEPENDPATH += $$PWD/.
